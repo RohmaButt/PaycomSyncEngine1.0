@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afiniti.PaycomEngine", "Afiniti.PaycomEngine\Afiniti.PaycomEngine.csproj", "{612C8BDA-A8D1-4DD3-9623-2513A037141D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afiniti.Paycom.DAL", "Afiniti.Paycom.DAL\Afiniti.Paycom.DAL.csproj", "{83C1BF6B-BA52-4567-81C5-981B60E9A9E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afiniti.Paycom.Shared", "Afiniti.Paycom.Shared\Afiniti.Paycom.Shared.csproj", "{4AC21D11-3EA0-4B08-B992-078AB0A2ABC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaycomScheduler", "PaycomScheduler\PaycomScheduler.csproj", "{96E37B2A-C2E9-46EF-AA76-448149539516}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Afiniti.Paycom.JiraEngine", "Afiniti.Paycom.JiraEngine\Afiniti.Paycom.JiraEngine.csproj", "{EA75D125-142A-4646-85B6-F2011F14D4C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaycomJiraSchedular", "PaycomJiraSchedular\PaycomJiraSchedular.csproj", "{55E8E962-1C49-46BA-ADB6-0867179993C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{314480D7-152D-442B-8A40-65A8E1266F02}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{612C8BDA-A8D1-4DD3-9623-2513A037141D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612C8BDA-A8D1-4DD3-9623-2513A037141D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612C8BDA-A8D1-4DD3-9623-2513A037141D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612C8BDA-A8D1-4DD3-9623-2513A037141D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83C1BF6B-BA52-4567-81C5-981B60E9A9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83C1BF6B-BA52-4567-81C5-981B60E9A9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83C1BF6B-BA52-4567-81C5-981B60E9A9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83C1BF6B-BA52-4567-81C5-981B60E9A9E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC21D11-3EA0-4B08-B992-078AB0A2ABC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC21D11-3EA0-4B08-B992-078AB0A2ABC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC21D11-3EA0-4B08-B992-078AB0A2ABC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC21D11-3EA0-4B08-B992-078AB0A2ABC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E37B2A-C2E9-46EF-AA76-448149539516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E37B2A-C2E9-46EF-AA76-448149539516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E37B2A-C2E9-46EF-AA76-448149539516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E37B2A-C2E9-46EF-AA76-448149539516}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA75D125-142A-4646-85B6-F2011F14D4C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA75D125-142A-4646-85B6-F2011F14D4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA75D125-142A-4646-85B6-F2011F14D4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA75D125-142A-4646-85B6-F2011F14D4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E8E962-1C49-46BA-ADB6-0867179993C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E8E962-1C49-46BA-ADB6-0867179993C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E8E962-1C49-46BA-ADB6-0867179993C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E8E962-1C49-46BA-ADB6-0867179993C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78286240-3800-4935-9480-30E48C739C6A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://10.32.9.85:8080/tfs/trgtech
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Afiniti.Paycom.DAL\\Afiniti.Paycom.DAL.csproj
+		SccProjectName1 = Afiniti.Paycom.DAL
+		SccLocalPath1 = Afiniti.Paycom.DAL
+		SccProjectUniqueName2 = Afiniti.PaycomEngine\\Afiniti.PaycomEngine.csproj
+		SccProjectName2 = Afiniti.PaycomEngine
+		SccLocalPath2 = Afiniti.PaycomEngine
+		SccProjectUniqueName3 = Afiniti.Paycom.Shared\\Afiniti.Paycom.Shared.csproj
+		SccProjectName3 = Afiniti.Paycom.Shared
+		SccLocalPath3 = Afiniti.Paycom.Shared
+		SccProjectUniqueName4 = PaycomScheduler\\PaycomScheduler.csproj
+		SccProjectName4 = PaycomScheduler
+		SccLocalPath4 = PaycomScheduler
+		SccProjectUniqueName5 = Afiniti.Paycom.JiraEngine\\Afiniti.Paycom.JiraEngine.csproj
+		SccProjectName5 = Afiniti.Paycom.JiraEngine
+		SccLocalPath5 = Afiniti.Paycom.JiraEngine
+		SccProjectUniqueName6 = PaycomJiraSchedular\\PaycomJiraSchedular.csproj
+		SccProjectName6 = PaycomJiraSchedular
+		SccLocalPath6 = PaycomJiraSchedular
+	EndGlobalSection
+EndGlobal

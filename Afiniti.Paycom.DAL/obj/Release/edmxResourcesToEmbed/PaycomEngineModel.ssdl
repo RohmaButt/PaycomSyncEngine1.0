@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PaycomEngineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ConfigurationActivity">
+    <Key>
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="ActivityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivityKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ConfigURLKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="EndDate" Type="datetime" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="ActivityDetail" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ConfigurationSetting">
+    <Key>
+      <PropertyRef Name="ConfigId" />
+    </Key>
+    <Property Name="ConfigId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConfigValue" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="ConfigValueKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ConfigAppEvent" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ConfigEventDetail" Type="nvarchar" MaxLength="500" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConfigSummary" Type="nvarchar" MaxLength="250" />
+    <Property Name="CcEmail" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="ConfigurationSettingDetail">
+    <Key>
+      <PropertyRef Name="ConfigDetailId" />
+    </Key>
+    <Property Name="ConfigDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConfigAppKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ParamName" Type="nvarchar" MaxLength="250" />
+    <Property Name="ParamValue" Type="nvarchar" MaxLength="250" />
+    <Property Name="AdditionalParamName" Type="nvarchar" MaxLength="250" />
+    <Property Name="AdditionalParamValue" Type="nvarchar" MaxLength="250" />
+    <Property Name="Summary" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FileStream_BaseColumns">
+    <Key>
+      <PropertyRef Name="BaseColumnId" />
+    </Key>
+    <Property Name="BaseColumnId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BaseColumnKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BaseColumnName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="BaseColumnDescription" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="IsEnrypted" Type="bit" />
+    <Property Name="IsMandatory" Type="bit" />
+    <Property Name="MandatoryCheck_Order" Type="int" />
+  </EntityType>
+  <EntityType Name="FileStream_BaseColumns_Mapping">
+    <Key>
+      <PropertyRef Name="BaseColumnMappingId" />
+    </Key>
+    <Property Name="BaseColumnMappingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BaseColumnMappingKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FileStreamKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BaseColumnKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FileStream_Types">
+    <Key>
+      <PropertyRef Name="FileStreamId" />
+    </Key>
+    <Property Name="FileStreamId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileStreamKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FileStreamExtension" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsActiveDownStream" Type="bit" Nullable="false" />
+    <Property Name="IsActiveUpStream" Type="bit" Nullable="false" />
+    <Property Name="IsDefaultDownStream" Type="bit" Nullable="false" />
+    <Property Name="IsDefaultUpStream" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="JiraTicket_ColumnConfigurations">
+    <Key>
+      <PropertyRef Name="ColumnId" />
+    </Key>
+    <Property Name="ColumnId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ColumnKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ColumnName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsEncrypted" Type="bit" Nullable="false" />
+    <Property Name="IsExternal" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="JiraMapping" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ColumnType" Type="int" />
+  </EntityType>
+  <EntityType Name="JiraTicketDetails">
+    <Key>
+      <PropertyRef Name="TicketDetailId" />
+    </Key>
+    <Property Name="TicketDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TicketDetailKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TicketKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ColumnKey" Type="uniqueidentifier" />
+    <Property Name="ColumnValue" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JiraTickets">
+    <Key>
+      <PropertyRef Name="Ticketld" />
+    </Key>
+    <Property Name="Ticketld" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TicketKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ReferenceId" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReferenceURL" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="DateTime" Type="datetime" Nullable="false" />
+    <Property Name="ClockSeq" Type="nvarchar" MaxLength="25" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="PaycomData">
+    <Key>
+      <PropertyRef Name="PaycomDataId" />
+    </Key>
+    <Property Name="PaycomDataId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaycomDataKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Employee_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Employee_FirstName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_MiddleName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_LastName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Department_Desc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tier_2_Desc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tier_3_Desc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClockSeq" Type="nvarchar" MaxLength="50" />
+    <Property Name="Hire_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Termination_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rehire_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="FullTime_to_PartTime_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="PartTime_to_FullTime_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Supervisor_Primary" Type="nvarchar" MaxLength="100" />
+    <Property Name="Last_Position_Change_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="City1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="25" />
+    <Property Name="City2" Type="nvarchar" MaxLength="100" />
+    <Property Name="NTLogin" Type="nvarchar" MaxLength="50" />
+    <Property Name="Work_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="nvarchar" MaxLength="100" />
+    <Property Name="ManagerEmpID" Type="nvarchar" MaxLength="100" />
+    <Property Name="EntityName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LineMgrEmailID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Manager_NT_Login" Type="nvarchar" MaxLength="100" />
+    <Property Name="DumpDate" Type="datetime" />
+    <Property Name="InitiatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="InsertionDate" Type="datetime" />
+    <Property Name="ValidityDate" Type="datetime" />
+    <Property Name="Certify_DSFlag" Type="nchar" MaxLength="1" />
+    <Property Name="Exchange_DSFlag" Type="char" MaxLength="1" />
+    <Property Name="WorkLocation" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="PaycomData_History">
+    <Key>
+      <PropertyRef Name="PaycomHistoryDataId" />
+    </Key>
+    <Property Name="PaycomHistoryDataId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PaycomHistoryDataKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PaycomDataId" Type="int" Nullable="false" />
+    <Property Name="PaycomDataKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Employee_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Employee_FirstName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_MiddleName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_LastName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Department_Desc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tier_2_Desc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tier_3_Desc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClockSeq" Type="nvarchar" MaxLength="50" />
+    <Property Name="Hire_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Termination_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rehire_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="FullTime_to_PartTime_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="PartTime_to_FullTime_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Supervisor_Primary" Type="nvarchar" MaxLength="100" />
+    <Property Name="Last_Position_Change_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="City1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="25" />
+    <Property Name="City2" Type="nvarchar" MaxLength="100" />
+    <Property Name="NTLogin" Type="nvarchar" MaxLength="50" />
+    <Property Name="Work_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="nvarchar" MaxLength="100" />
+    <Property Name="ManagerEmpID" Type="nvarchar" MaxLength="100" />
+    <Property Name="EntityName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LineMgrEmailID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Manager_NT_Login" Type="nvarchar" MaxLength="100" />
+    <Property Name="DumpDate" Type="datetime" />
+    <Property Name="InitiatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="InsertionDate" Type="datetime" />
+    <Property Name="ValidityDate" Type="datetime" />
+    <Property Name="HistoryDumpDate" Type="datetime" Nullable="false" />
+    <Property Name="Certify_DSFlag" Type="nchar" MaxLength="1" />
+    <Property Name="Exchange_DSFlag" Type="char" MaxLength="1" />
+    <Property Name="WorkLocation" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="PaycomData_Logs_Level1">
+    <Key>
+      <PropertyRef Name="ProcessLogId" />
+    </Key>
+    <Property Name="ProcessLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogDate" Type="datetime" />
+    <Property Name="LogType" Type="nchar" MaxLength="20" />
+    <Property Name="LogStage" Type="nchar" MaxLength="20" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="250" />
+    <Property Name="LogDetail" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PaycomData_Logs_Level2">
+    <Key>
+      <PropertyRef Name="ProcessRowLogId" />
+    </Key>
+    <Property Name="ProcessRowLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogDate" Type="datetime" />
+    <Property Name="LogType" Type="nchar" MaxLength="20" />
+    <Property Name="LogStage" Type="nchar" MaxLength="20" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ColumnName" Type="nvarchar" MaxLength="1000" />
+    <Property Name="LogDetail" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="PaycomData_MissingInfo">
+    <Key>
+      <PropertyRef Name="DataId" />
+    </Key>
+    <Property Name="DataId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataKey" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ClockSeq" Type="nvarchar" MaxLength="50" />
+    <Property Name="Employee_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="NT_Login" Type="nvarchar" MaxLength="100" />
+    <Property Name="Work_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Is_Processed" Type="nchar" MaxLength="50" />
+    <Property Name="CurrentJiraStatus" Type="nvarchar" MaxLength="100" />
+    <Property Name="JiraTicketReference" Type="nvarchar" MaxLength="100" />
+    <Property Name="JiraTicketURL" Type="nvarchar" MaxLength="250" />
+    <Property Name="InitiatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="InsertionDate" Type="datetime" />
+    <Property Name="InsertionFileName" Type="nvarchar" MaxLength="250" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="UpdationDate" Type="datetime" />
+    <Property Name="UpdationFileName" Type="nvarchar" MaxLength="250" />
+    <Property Name="UpdateCount" Type="int" />
+    <Property Name="IsActive" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PaycomData_Scrubbed">
+    <Key>
+      <PropertyRef Name="ScrubId" />
+    </Key>
+    <Property Name="ScrubId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Employee_Code" Type="nvarchar" MaxLength="100" />
+    <Property Name="Employee_FirstName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_MiddleName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_LastName" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Department_Desc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tier_2_Desc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Tier_3_Desc" Type="nvarchar" MaxLength="150" />
+    <Property Name="Employee_Status" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClockSeq" Type="nvarchar" MaxLength="50" />
+    <Property Name="Hire_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Termination_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Rehire_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="FullTime_to_PartTime_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="PartTime_to_FullTime_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="Supervisor_Primary" Type="nvarchar" MaxLength="100" />
+    <Property Name="Last_Position_Change_Date" Type="nvarchar" MaxLength="100" />
+    <Property Name="City1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="25" />
+    <Property Name="City2" Type="nvarchar" MaxLength="100" />
+    <Property Name="NTLogin" Type="nvarchar" MaxLength="50" />
+    <Property Name="Work_Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Position" Type="nvarchar" MaxLength="100" />
+    <Property Name="ManagerEmpID" Type="nvarchar" MaxLength="100" />
+    <Property Name="EntityName" Type="nvarchar" MaxLength="100" />
+    <Property Name="LineMgrEmailID" Type="nvarchar" MaxLength="50" />
+    <Property Name="Manager_NT_Login" Type="nvarchar" MaxLength="100" />
+    <Property Name="DumpDate" Type="datetime" />
+    <Property Name="InitiatedBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="InsertionDate" Type="datetime" />
+    <Property Name="ValidityDate" Type="datetime" />
+    <Property Name="Certify_DSFlag" Type="nchar" MaxLength="1" />
+    <Property Name="NewEmployee_Flag" Type="bit" />
+    <Property Name="ValidationFail_Flag" Type="bit" />
+    <Property Name="Exchange_DSFlag" Type="char" MaxLength="1" />
+    <Property Name="WorkLocation" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityContainer Name="PaycomEngineModelStoreContainer">
+    <EntitySet Name="ConfigurationActivity" EntityType="Self.ConfigurationActivity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConfigurationSetting" EntityType="Self.ConfigurationSetting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConfigurationSettingDetail" EntityType="Self.ConfigurationSettingDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileStream_BaseColumns" EntityType="Self.FileStream_BaseColumns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileStream_BaseColumns_Mapping" EntityType="Self.FileStream_BaseColumns_Mapping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileStream_Types" EntityType="Self.FileStream_Types" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JiraTicket_ColumnConfigurations" EntityType="Self.JiraTicket_ColumnConfigurations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JiraTicketDetails" EntityType="Self.JiraTicketDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JiraTickets" EntityType="Self.JiraTickets" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaycomData" EntityType="Self.PaycomData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaycomData_History" EntityType="Self.PaycomData_History" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaycomData_Logs_Level1" EntityType="Self.PaycomData_Logs_Level1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaycomData_Logs_Level2" EntityType="Self.PaycomData_Logs_Level2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaycomData_MissingInfo" EntityType="Self.PaycomData_MissingInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PaycomData_Scrubbed" EntityType="Self.PaycomData_Scrubbed" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,12 @@
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\bin\Debug\Afiniti.Paycom.DAL.dll.config
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\bin\Debug\Afiniti.Paycom.DAL.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\bin\Debug\Afiniti.Paycom.DAL.pdb
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\bin\Debug\EntityFramework.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\bin\Debug\EntityFramework.xml
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\obj\Debug\Afiniti.Paycom.DAL.csproj.CoreCompileInputs.cache
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\obj\Debug\Afiniti.Paycom.DAL.csproj.CopyComplete
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\obj\Debug\Afiniti.Paycom.DAL.dll
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\obj\Debug\Afiniti.Paycom.DAL.pdb
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\Afiniti.Paycom.DAL\obj\Debug\Afiniti.Paycom.DAL.csprojAssemblyReference.cache

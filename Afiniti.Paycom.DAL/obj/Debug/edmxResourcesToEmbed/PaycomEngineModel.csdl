@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PaycomEngineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FileStream_BaseColumns">
+    <Key>
+      <PropertyRef Name="BaseColumnId" />
+    </Key>
+    <Property Name="BaseColumnId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BaseColumnKey" Type="Guid" Nullable="false" />
+    <Property Name="BaseColumnName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BaseColumnDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="IsEnrypted" Type="Boolean" />
+    <Property Name="MandatoryCheck_Order" Type="Int32" />
+    <Property Name="IsMandatory" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="FileStream_BaseColumns_Mapping">
+    <Key>
+      <PropertyRef Name="BaseColumnMappingId" />
+    </Key>
+    <Property Name="BaseColumnMappingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BaseColumnMappingKey" Type="Guid" Nullable="false" />
+    <Property Name="FileStreamKey" Type="Guid" Nullable="false" />
+    <Property Name="BaseColumnKey" Type="Guid" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="FileStream_Types">
+    <Key>
+      <PropertyRef Name="FileStreamId" />
+    </Key>
+    <Property Name="FileStreamId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FileStreamKey" Type="Guid" Nullable="false" />
+    <Property Name="FileStreamExtension" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsActiveDownStream" Type="Boolean" Nullable="false" />
+    <Property Name="IsActiveUpStream" Type="Boolean" Nullable="false" />
+    <Property Name="IsDefaultDownStream" Type="Boolean" Nullable="false" />
+    <Property Name="IsDefaultUpStream" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PaycomData">
+    <Key>
+      <PropertyRef Name="PaycomDataId" />
+    </Key>
+    <Property Name="PaycomDataId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaycomDataKey" Type="Guid" Nullable="false" />
+    <Property Name="Employee_Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_FirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_MiddleName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_LastName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Department_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tier_2_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tier_3_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClockSeq" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Hire_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Termination_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Rehire_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PartTime_to_FullTime_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Supervisor_Primary" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Last_Position_Change_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Currency" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="City2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NTLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerEmpID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EntityName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LineMgrEmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Manager_NT_Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DumpDate" Type="DateTime" Precision="3" />
+    <Property Name="InitiatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FullTime_to_PartTime_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InsertionDate" Type="DateTime" Precision="3" />
+    <Property Name="ValidityDate" Type="DateTime" Precision="3" />
+    <Property Name="Certify_DSFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Exchange_DSFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WorkLocation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PaycomData_History">
+    <Key>
+      <PropertyRef Name="PaycomHistoryDataId" />
+    </Key>
+    <Property Name="PaycomHistoryDataId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaycomHistoryDataKey" Type="Guid" Nullable="false" />
+    <Property Name="PaycomDataId" Type="Int32" Nullable="false" />
+    <Property Name="PaycomDataKey" Type="Guid" Nullable="false" />
+    <Property Name="Employee_Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_FirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_MiddleName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_LastName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Department_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tier_2_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tier_3_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClockSeq" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Hire_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Termination_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Rehire_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PartTime_to_FullTime_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Supervisor_Primary" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Last_Position_Change_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Currency" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="City2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NTLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerEmpID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EntityName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LineMgrEmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Manager_NT_Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DumpDate" Type="DateTime" Precision="3" />
+    <Property Name="InitiatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="HistoryDumpDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Employee_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="FullTime_to_PartTime_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InsertionDate" Type="DateTime" Precision="3" />
+    <Property Name="ValidityDate" Type="DateTime" Precision="3" />
+    <Property Name="Certify_DSFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="Exchange_DSFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WorkLocation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="PaycomEngineContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FileStream_BaseColumns" EntityType="Self.FileStream_BaseColumns" />
+    <EntitySet Name="FileStream_BaseColumns_Mapping" EntityType="Self.FileStream_BaseColumns_Mapping" />
+    <EntitySet Name="FileStream_Types" EntityType="Self.FileStream_Types" />
+    <EntitySet Name="PaycomData" EntityType="Self.PaycomData" />
+    <EntitySet Name="PaycomData_History" EntityType="Self.PaycomData_History" />
+    <EntitySet Name="ConfigurationActivity" EntityType="PaycomEngineModel.ConfigurationActivity" />
+    <EntitySet Name="PaycomData_Logs_Level1" EntityType="PaycomEngineModel.PaycomData_Logs_Level1" />
+    <EntitySet Name="PaycomData_Logs_Level2" EntityType="PaycomEngineModel.PaycomData_Logs_Level2" />
+    <EntitySet Name="ConfigurationSetting" EntityType="PaycomEngineModel.ConfigurationSetting" />
+    <EntitySet Name="ConfigurationSettingDetail" EntityType="PaycomEngineModel.ConfigurationSettingDetail" />
+    <EntitySet Name="JiraTicket_ColumnConfigurations" EntityType="PaycomEngineModel.JiraTicket_ColumnConfigurations" />
+    <EntitySet Name="JiraTicketDetails" EntityType="PaycomEngineModel.JiraTicketDetails" />
+    <EntitySet Name="JiraTickets" EntityType="PaycomEngineModel.JiraTickets" />
+    <EntitySet Name="PaycomData_MissingInfo" EntityType="PaycomEngineModel.PaycomData_MissingInfo" />
+    <EntitySet Name="PaycomData_Scrubbed" EntityType="PaycomEngineModel.PaycomData_Scrubbed" />
+  </EntityContainer>
+  <EntityType Name="ConfigurationActivity">
+    <Key>
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="ActivityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityKey" Type="Guid" Nullable="false" />
+    <Property Name="ConfigURLKey" Type="Guid" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="EndDate" Type="DateTime" Precision="3" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ActivityDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PaycomData_Logs_Level1">
+    <Key>
+      <PropertyRef Name="ProcessLogId" />
+    </Key>
+    <Property Name="ProcessLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogDate" Type="DateTime" Precision="3" />
+    <Property Name="LogType" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="LogStage" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="FileName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="LogDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PaycomData_Logs_Level2">
+    <Key>
+      <PropertyRef Name="ProcessRowLogId" />
+    </Key>
+    <Property Name="ProcessRowLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LogDate" Type="DateTime" Precision="3" />
+    <Property Name="LogType" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="LogStage" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="FileName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ColumnName" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="LogDetail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConfigurationSetting">
+    <Key>
+      <PropertyRef Name="ConfigId" />
+    </Key>
+    <Property Name="ConfigId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConfigValue" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConfigValueKey" Type="Guid" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ConfigEventDetail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ConfigSummary" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ConfigAppEvent" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CcEmail" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ConfigurationSettingDetail">
+    <Key>
+      <PropertyRef Name="ConfigDetailId" />
+    </Key>
+    <Property Name="ConfigDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConfigAppKey" Type="Guid" Nullable="false" />
+    <Property Name="ParamName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ParamValue" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalParamName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalParamValue" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Summary" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="JiraTicket_ColumnConfigurations">
+    <Key>
+      <PropertyRef Name="ColumnId" />
+    </Key>
+    <Property Name="ColumnId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ColumnKey" Type="Guid" Nullable="false" />
+    <Property Name="ColumnName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsEncrypted" Type="Boolean" Nullable="false" />
+    <Property Name="IsExternal" Type="Boolean" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="JiraMapping" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ColumnType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="JiraTicketDetails">
+    <Key>
+      <PropertyRef Name="TicketDetailId" />
+    </Key>
+    <Property Name="TicketDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketDetailKey" Type="Guid" Nullable="false" />
+    <Property Name="TicketKey" Type="Guid" Nullable="false" />
+    <Property Name="ColumnKey" Type="Guid" />
+    <Property Name="ColumnValue" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="JiraTickets">
+    <Key>
+      <PropertyRef Name="Ticketld" />
+    </Key>
+    <Property Name="Ticketld" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TicketKey" Type="Guid" Nullable="false" />
+    <Property Name="ReferenceId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ReferenceURL" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ClockSeq" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="FileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PaycomData_MissingInfo">
+    <Key>
+      <PropertyRef Name="DataId" />
+    </Key>
+    <Property Name="DataId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DataKey" Type="Guid" Nullable="false" />
+    <Property Name="ClockSeq" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NT_Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Is_Processed" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="CurrentJiraStatus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="JiraTicketReference" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="JiraTicketURL" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="InitiatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InsertionDate" Type="DateTime" Precision="3" />
+    <Property Name="InsertionFileName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UpdationDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdationFileName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="UpdateCount" Type="Int32" />
+    <Property Name="IsActive" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PaycomData_Scrubbed">
+    <Key>
+      <PropertyRef Name="ScrubId" />
+    </Key>
+    <Property Name="ScrubId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Employee_Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_FirstName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_MiddleName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_LastName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_Name" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Department_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tier_2_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Tier_3_Desc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Employee_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClockSeq" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Hire_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Termination_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Rehire_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FullTime_to_PartTime_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PartTime_to_FullTime_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Supervisor_Primary" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Last_Position_Change_Date" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Currency" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="City2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NTLogin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Work_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ManagerEmpID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EntityName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LineMgrEmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Manager_NT_Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DumpDate" Type="DateTime" Precision="3" />
+    <Property Name="InitiatedBy" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InsertionDate" Type="DateTime" Precision="3" />
+    <Property Name="ValidityDate" Type="DateTime" Precision="3" />
+    <Property Name="Certify_DSFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="NewEmployee_Flag" Type="Boolean" />
+    <Property Name="ValidationFail_Flag" Type="Boolean" />
+    <Property Name="Exchange_DSFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="WorkLocation" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,7 @@
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\PaycomJiraSchedular\bin\Debug\PaycomJiraSchedular.exe.config
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\PaycomJiraSchedular\bin\Debug\PaycomJiraSchedular.exe
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\PaycomJiraSchedular\bin\Debug\PaycomJiraSchedular.pdb
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\PaycomJiraSchedular\obj\Debug\PaycomJiraSchedular.csprojAssemblyReference.cache
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\PaycomJiraSchedular\obj\Debug\PaycomJiraSchedular.csproj.CoreCompileInputs.cache
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\PaycomJiraSchedular\obj\Debug\PaycomJiraSchedular.exe
+D:\TRG SATMAP\Connect\Source 2013\Main v 1.0.0\Development\Afiniti.PaycomEngine\PaycomJiraSchedular\obj\Debug\PaycomJiraSchedular.pdb
